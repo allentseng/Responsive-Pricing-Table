@@ -8,46 +8,42 @@
           box-sizing: border-box
 }
 
-.row {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 75rem;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.column {
-    float: left;
-    position: relative;
-    padding: 0.65em;
-    width: 100%;
-}
-
 /*
  * -- PRICING TABLE WRAPPER --
  * This element wraps up all the pricing table elements
  */
 .pricing-tables {
     font-family: sans-serif;
+    width: 100%;
+    max-width: 75rem;
 	margin: 0 auto;
     margin-bottom: 3.125em;
     text-align: center;
+}
+
+.pricing-tables:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /*
  * -- PRICING TABLE  --
  * Every pricing table has the .pricing-table class
  */
+.pricing-table-wrap {
+    float: left;
+    position: relative;
+    padding: 0.65em;
+    width: 100%;
+}
+
 .pricing-table {
+    margin: 0 0.5em 2em;
 	border-radius: 4px 4px 6px 6px;
 	-moz-border-radius: 4px 4px 6px 6px;
 	-webkit-border-radius: 4px 4px 6px 6px;
     border: 1px solid #ddd;
-    margin: 0 0.5em 2em;
     padding: 0;
 }
 
@@ -180,7 +176,7 @@
 }
 
 @media screen and (min-width: 50em) {
-    .column {
+    .pricing-table-wrap {
         width: 33.3333333333%;
     }
 }
